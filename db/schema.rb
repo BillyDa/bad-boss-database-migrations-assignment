@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_185334) do
+ActiveRecord::Schema.define(version: 2018_08_13_191853) do
 
   create_table "location", force: :cascade do |t|
     t.string "city"
     t.string "weather"
+    t.string "boss_name"
+    t.integer "address"
+    t.string "street"
   end
 
   create_table "parts", force: :cascade do |t|
@@ -22,18 +25,6 @@ ActiveRecord::Schema.define(version: 2018_08_13_185334) do
     t.string "manufacturer"
     t.decimal "cost"
     t.integer "decimal"
-  end
-
-  create_table "widgets", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.text "dietary_restrictions"
-    t.integer "salary"
-    t.integer "number_of_kids"
-    t.text "vulnerabilities"
-    t.text "illnesses"
-    t.string "medication"
-    t.string "voting_preferences"
   end
 
 end
